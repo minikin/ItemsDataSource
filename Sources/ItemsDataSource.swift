@@ -1,9 +1,99 @@
 //
 //  ItemsDataSource.swift
-//  ItemsDataSource
+//  RPonSB
 //
-//  Created by Sasha Prokhorenko on 13.12.17.
-//  Copyright © 2017 ItemsDataSource. All rights reserved.
+//  Created by Sasha Prokhorenko on 06.12.17.
+//  Copyright © 2017 Sasha Prokhorenko. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+final class ItemsDataSource: NSObject, UICollectionViewDataSource {
+	
+	var sections: [Groupable]?
+	var items: [Itemable]?
+	let supplementaryDescriptor: ((Groupable) -> SupplementaryDescriptor)?
+	let cellDescriptor: (Itemable) -> CellDescriptor
+	
+	init(sections: [Groupable],
+			 supplementaryDescriptor:  @escaping (Groupable) -> SupplementaryDescriptor,
+			 cellDescriptor: @escaping (Itemable) -> CellDescriptor) {
+		
+		self.supplementaryDescriptor = supplementaryDescriptor
+		self.cellDescriptor = cellDescriptor
+		self.sections = sections
+		self.items = nil
+	}
+	
+	init(items: [Itemable],
+			 cellDescriptor: @escaping (Itemable) -> CellDescriptor) {
+		
+		self.sections = nil
+		self.supplementaryDescriptor = nil
+		self.items = items
+		self.cellDescriptor = cellDescriptor
+	}
+	
+	func numberOfSections(in collectionView: UICollectionView) -> Int {
+		if let sections = self.sections {
+			return sections.count
+		} else {
+			return 1
+		}
+	}
+	
+	func collectionView(_ collectionView: UICollectionView,
+											numberOfItemsInSection section: Int) -> Int {
+		if let sections = self.sections {
+			return sections[section].items.count
+		} else {
+			return items?.count ?? 0
+		}
+	}
+	
+	func collectionView(_ collectionView: UICollectionView,
+											cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		
+		if let sections = self.sections {
+			let item = sections[indexPath.section].items[indexPath.row]
+			let descriptor = cellDescriptor(item)
+			let cell = collectionView.dequeueReusableCell(withReuseIdentifier: descriptor.reuseIdentifier, for: indexPath)
+			descriptor.configure(cell)
+			return cell
+		} else {
+			guard let realItems = items else {
+				return UICollectionViewCell()
+			}
+			let item = realItems[indexPath.row]
+			let descriptor = cellDescriptor(item)
+			let cell = collectionView.dequeueReusableCell(withReuseIdentifier: descriptor.reuseIdentifier, for: indexPath)
+			descriptor.configure(cell)
+			return cell
+		}
+	}
+	
+	func collectionView(_ collectionView: UICollectionView,
+											viewForSupplementaryElementOfKind kind: String,
+											at indexPath: IndexPath) -> UICollectionReusableView {
+		switch kind {
+			case UICollectionElementKindSectionHeader:
+				if let sections = self.sections {
+					let section = sections[indexPath.section]
+					guard let headerDescriptor = supplementaryDescriptor else {
+						return UICollectionReusableView()
+					}
+					let descriptor = headerDescriptor(section)
+					let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
+																																					 withReuseIdentifier: descriptor.reuseIdentifier,
+																																					 for: indexPath)
+					descriptor.configure(headerView)
+					return headerView
+				} else {
+					return UICollectionReusableView()
+			}
+		default:
+			return UICollectionReusableView()
+		}
+	}
+	
+}
