@@ -1,13 +1,24 @@
 # ItemsDataSource
 
+
+ItemsDataSource is an generic datasource for UICollectionView.
+
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage]()
+- [License](#license)
+
 ## Features
 
+- [x] Description will be added
+- [x] Description will be added
+- [x] Description will be added
 
 ## Requirements
 - iOS 10.0+ 
 - Xcode 9.0+
 - Swift 4.0+
-
 
 ## Installation
 
