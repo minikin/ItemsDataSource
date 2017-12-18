@@ -1,6 +1,8 @@
 # ItemsDataSource
 
 
+[![Build Status](https://travis-ci.org/minikin/ItemsDataSource.svg?branch=master)](https://travis-ci.org/minikin/ItemsDataSource)
+
 ItemsDataSource is an generic datasource for UICollectionView.
 
 - [Features](#features)
