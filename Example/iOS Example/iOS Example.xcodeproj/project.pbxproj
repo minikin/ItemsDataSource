@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC1ED1C91FE7D76F002E50FD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1ED1C81FE7D76F002E50FD /* MainViewController.swift */; };
+		FC1ED1CD1FE7D779002E50FD /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1ED1CC1FE7D779002E50FD /* ExampleViewController.swift */; };
+		FC1ED1D91FE7EFDD002E50FD /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1ED1D81FE7EFDD002E50FD /* MainCell.swift */; };
+		FC1ED1DB1FE7EFE7002E50FD /* ExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1ED1DA1FE7EFE7002E50FD /* ExampleCell.swift */; };
+		FC1ED1DD1FE7F0B1002E50FD /* MainHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1ED1DC1FE7F0B1002E50FD /* MainHeader.swift */; };
+		FC1ED1DF1FE7F0C3002E50FD /* ExampleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1ED1DE1FE7F0C3002E50FD /* ExampleHeader.swift */; };
 		FC7484DF1FE7C733002AB969 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7484DE1FE7C733002AB969 /* AppDelegate.swift */; };
-		FC7484E11FE7C733002AB969 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7484E01FE7C733002AB969 /* ViewController.swift */; };
 		FC7484E41FE7C733002AB969 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7484E21FE7C733002AB969 /* Main.storyboard */; };
 		FC7484E61FE7C733002AB969 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7484E51FE7C733002AB969 /* Assets.xcassets */; };
 		FC7484E91FE7C733002AB969 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7484E71FE7C733002AB969 /* LaunchScreen.storyboard */; };
@@ -32,9 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC1ED1C81FE7D76F002E50FD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FC1ED1CC1FE7D779002E50FD /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		FC1ED1D81FE7EFDD002E50FD /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		FC1ED1DA1FE7EFE7002E50FD /* ExampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCell.swift; sourceTree = "<group>"; };
+		FC1ED1DC1FE7F0B1002E50FD /* MainHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeader.swift; sourceTree = "<group>"; };
+		FC1ED1DE1FE7F0C3002E50FD /* ExampleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleHeader.swift; sourceTree = "<group>"; };
 		FC7484DB1FE7C733002AB969 /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7484DE1FE7C733002AB969 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC7484E01FE7C733002AB969 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FC7484E31FE7C733002AB969 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC7484E51FE7C733002AB969 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC7484E81FE7C733002AB969 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +63,81 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC1ED1CE1FE7D77D002E50FD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC1ED1CC1FE7D779002E50FD /* ExampleViewController.swift */,
+				FC1ED1C81FE7D76F002E50FD /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FC1ED1CF1FE7D787002E50FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC1ED1D61FE7D829002E50FD /* Cells */,
+				FC1ED1D71FE7D85F002E50FD /* Headers & Footers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FC1ED1D01FE7D78C002E50FD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FC1ED1D11FE7D791002E50FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC7484DE1FE7C733002AB969 /* AppDelegate.swift */,
+				FC7484EA1FE7C733002AB969 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC1ED1D21FE7D79C002E50FD /* Storyboards and Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				FC7484E71FE7C733002AB969 /* LaunchScreen.storyboard */,
+				FC7484E21FE7C733002AB969 /* Main.storyboard */,
+			);
+			path = "Storyboards and Xibs";
+			sourceTree = "<group>";
+		};
+		FC1ED1D31FE7D7FD002E50FD /* FakeDataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FakeDataSource;
+			sourceTree = "<group>";
+		};
+		FC1ED1D41FE7D80C002E50FD /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		FC1ED1D61FE7D829002E50FD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FC1ED1D81FE7EFDD002E50FD /* MainCell.swift */,
+				FC1ED1DA1FE7EFE7002E50FD /* ExampleCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FC1ED1D71FE7D85F002E50FD /* Headers & Footers */ = {
+			isa = PBXGroup;
+			children = (
+				FC1ED1DC1FE7F0B1002E50FD /* MainHeader.swift */,
+				FC1ED1DE1FE7F0C3002E50FD /* ExampleHeader.swift */,
+			);
+			path = "Headers & Footers";
+			sourceTree = "<group>";
+		};
 		FC7484D21FE7C733002AB969 = {
 			isa = PBXGroup;
 			children = (
@@ -73,12 +158,14 @@
 		FC7484DD1FE7C733002AB969 /* iOS Example */ = {
 			isa = PBXGroup;
 			children = (
-				FC7484DE1FE7C733002AB969 /* AppDelegate.swift */,
-				FC7484E01FE7C733002AB969 /* ViewController.swift */,
-				FC7484E21FE7C733002AB969 /* Main.storyboard */,
 				FC7484E51FE7C733002AB969 /* Assets.xcassets */,
-				FC7484E71FE7C733002AB969 /* LaunchScreen.storyboard */,
-				FC7484EA1FE7C733002AB969 /* Info.plist */,
+				FC1ED1D31FE7D7FD002E50FD /* FakeDataSource */,
+				FC1ED1D41FE7D80C002E50FD /* Layouts */,
+				FC1ED1D01FE7D78C002E50FD /* Models */,
+				FC1ED1D21FE7D79C002E50FD /* Storyboards and Xibs */,
+				FC1ED1D11FE7D791002E50FD /* Supporting Files */,
+				FC1ED1CE1FE7D77D002E50FD /* ViewControllers */,
+				FC1ED1CF1FE7D787002E50FD /* Views */,
 			);
 			path = "iOS Example";
 			sourceTree = "<group>";
@@ -187,7 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC7484E11FE7C733002AB969 /* ViewController.swift in Sources */,
+				FC1ED1DB1FE7EFE7002E50FD /* ExampleCell.swift in Sources */,
+				FC1ED1C91FE7D76F002E50FD /* MainViewController.swift in Sources */,
+				FC1ED1DF1FE7F0C3002E50FD /* ExampleHeader.swift in Sources */,
+				FC1ED1CD1FE7D779002E50FD /* ExampleViewController.swift in Sources */,
+				FC1ED1DD1FE7F0B1002E50FD /* MainHeader.swift in Sources */,
+				FC1ED1D91FE7EFDD002E50FD /* MainCell.swift in Sources */,
 				FC7484DF1FE7C733002AB969 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,7 +419,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U8369V84MM;
-				INFOPLIST_FILE = "iOS Example/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/iOS Example/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "minikin.ItemsDataSource-iOS-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -342,7 +434,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U8369V84MM;
-				INFOPLIST_FILE = "iOS Example/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/iOS Example/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "minikin.ItemsDataSource-iOS-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
