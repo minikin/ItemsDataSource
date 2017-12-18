@@ -14,6 +14,23 @@
 		FC7484E91FE7C733002AB969 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7484E71FE7C733002AB969 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		FC7484F61FE7CB52002AB969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7484F11FE7CB52002AB969 /* ItemsDataSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52D6D97C1BEFF229002C0205;
+			remoteInfo = "ItemsDataSource-iOS";
+		};
+		FC7484F81FE7CB52002AB969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7484F11FE7CB52002AB969 /* ItemsDataSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52D6D9861BEFF229002C0205;
+			remoteInfo = "ItemsDataSource-iOS Tests";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		FC7484DB1FE7C733002AB969 /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7484DE1FE7C733002AB969 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -22,6 +39,7 @@
 		FC7484E51FE7C733002AB969 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC7484E81FE7C733002AB969 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC7484EA1FE7C733002AB969 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC7484F11FE7CB52002AB969 /* ItemsDataSource.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ItemsDataSource.xcodeproj; path = ../../ItemsDataSource.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +56,7 @@
 		FC7484D21FE7C733002AB969 = {
 			isa = PBXGroup;
 			children = (
+				FC7484F11FE7CB52002AB969 /* ItemsDataSource.xcodeproj */,
 				FC7484DD1FE7C733002AB969 /* iOS Example */,
 				FC7484DC1FE7C733002AB969 /* Products */,
 			);
@@ -62,6 +81,15 @@
 				FC7484EA1FE7C733002AB969 /* Info.plist */,
 			);
 			path = "iOS Example";
+			sourceTree = "<group>";
+		};
+		FC7484F21FE7CB52002AB969 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC7484F71FE7CB52002AB969 /* ItemsDataSource.framework */,
+				FC7484F91FE7CB52002AB969 /* ItemsDataSource-iOS Tests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,12 +139,35 @@
 			mainGroup = FC7484D21FE7C733002AB969;
 			productRefGroup = FC7484DC1FE7C733002AB969 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FC7484F21FE7CB52002AB969 /* Products */;
+					ProjectRef = FC7484F11FE7CB52002AB969 /* ItemsDataSource.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				FC7484DA1FE7C733002AB969 /* iOS Example */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		FC7484F71FE7CB52002AB969 /* ItemsDataSource.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ItemsDataSource.framework;
+			remoteRef = FC7484F61FE7CB52002AB969 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FC7484F91FE7CB52002AB969 /* ItemsDataSource-iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ItemsDataSource-iOS Tests.xctest";
+			remoteRef = FC7484F81FE7CB52002AB969 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FC7484D91FE7C733002AB969 /* Resources */ = {
