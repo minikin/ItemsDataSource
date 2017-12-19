@@ -8,6 +8,6 @@
 
 import UIKit
 
-class ExampleHeader: UICollectionReusableView {
-        
+final class ExampleHeader: UICollectionReusableView {
+	@IBOutlet weak var exampleHeaderLabel: UILabel!
 }

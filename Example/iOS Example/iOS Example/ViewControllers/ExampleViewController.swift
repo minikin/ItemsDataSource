@@ -8,11 +8,16 @@
 
 import UIKit
 
-class ExampleViewController: UIViewController {
+final class ExampleViewController: UIViewController {
+	
+	
+	// MARK: - IBOutlets
+	@IBOutlet weak var exampleCollectionView: UICollectionView!
 	
 	// MARK: - Instance Properties
 	
-
+	
+	
 	// MARK: - ViewController LifeCycle
 	override func viewDidLoad() {
 		super.viewDidLoad()

@@ -28,7 +28,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainCell" id="KVS-VX-x53">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainCell" id="KVS-VX-x53" customClass="MainCell" customModule="iOS_Example" customModuleProvider="target">
                                         <rect key="frame" x="5" y="50" width="365" height="71"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -48,6 +48,9 @@
                                             <constraint firstItem="NbZ-qx-Lnb" firstAttribute="leading" secondItem="KVS-VX-x53" secondAttribute="leading" constant="20" id="7VF-kt-Uk7"/>
                                             <constraint firstItem="NbZ-qx-Lnb" firstAttribute="centerX" secondItem="KVS-VX-x53" secondAttribute="centerX" id="fqW-PF-Hkh"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="cellLabel" destination="NbZ-qx-Lnb" id="RLE-8E-HfA"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="MainHeader" id="4fx-kH-NuB" userLabel="Header" customClass="MainHeader" customModule="iOS_Example" customModuleProvider="target">
@@ -66,6 +69,9 @@
                                         <constraint firstItem="VaD-Vw-Bpc" firstAttribute="centerY" secondItem="4fx-kH-NuB" secondAttribute="centerY" id="LM9-IN-kvv"/>
                                         <constraint firstItem="VaD-Vw-Bpc" firstAttribute="leading" secondItem="4fx-kH-NuB" secondAttribute="leading" constant="20" id="P0q-2S-GZI"/>
                                     </constraints>
+                                    <connections>
+                                        <outlet property="headerLabel" destination="VaD-Vw-Bpc" id="MnF-Cp-lgK"/>
+                                    </connections>
                                 </collectionReusableView>
                             </collectionView>
                         </subviews>
@@ -106,7 +112,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExampleCell" id="Vvl-8Q-BQH">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExampleCell" id="Vvl-8Q-BQH" customClass="ExampleCell" customModule="iOS_Example" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -126,6 +132,9 @@
                                             <constraint firstItem="Syg-9U-m4F" firstAttribute="centerY" secondItem="Vvl-8Q-BQH" secondAttribute="centerY" id="UWI-wo-Ep9"/>
                                             <constraint firstItem="Syg-9U-m4F" firstAttribute="leading" secondItem="Vvl-8Q-BQH" secondAttribute="leading" constant="20" id="qca-yo-iS9"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="exampleCellLabel" destination="Syg-9U-m4F" id="sdB-iT-hiH"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="ExampleHeader" id="EeP-9K-FS8" customClass="ExampleHeader" customModule="iOS_Example" customModuleProvider="target">
@@ -144,6 +153,9 @@
                                         <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="8nv-ef-SZU" secondAttribute="trailing" constant="20" symbolic="YES" id="IhX-DJ-C7C"/>
                                         <constraint firstItem="8nv-ef-SZU" firstAttribute="centerY" secondItem="EeP-9K-FS8" secondAttribute="centerY" id="gz2-LK-SFt"/>
                                     </constraints>
+                                    <connections>
+                                        <outlet property="exampleHeaderLabel" destination="8nv-ef-SZU" id="YwL-Vz-pl4"/>
+                                    </connections>
                                 </collectionReusableView>
                             </collectionView>
                         </subviews>
@@ -157,10 +169,13 @@
                         <viewLayoutGuide key="safeArea" id="D5N-vE-Yk7"/>
                     </view>
                     <navigationItem key="navigationItem" title="Example" id="xkJ-WA-aPE"/>
+                    <connections>
+                        <outlet property="exampleCollectionView" destination="ZHK-1J-lYf" id="pf2-Hb-y9P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kMa-QH-wMl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1052" y="139.880059970015"/>
+            <point key="canvasLocation" x="1063" y="-199"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cnz-hW-5OR">
