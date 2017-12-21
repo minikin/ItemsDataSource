@@ -8,13 +8,13 @@
 
 import UIKit
 
-struct CellDescriptor {
+public struct CellDescriptor {
 	
-	let cellClass: UICollectionViewCell.Type
-	let reuseIdentifier: String
-	let configure: (UICollectionViewCell) -> ()
+	public let cellClass: UICollectionViewCell.Type
+	public let reuseIdentifier: String
+	public let configure: (UICollectionViewCell) -> ()
 	
-	init<Cell: UICollectionViewCell>(reuseIdentifier: String, configure: @escaping (Cell) -> ()) {
+	public init<Cell: UICollectionViewCell>(reuseIdentifier: String, configure: @escaping (Cell) -> ()) {
 		self.cellClass = Cell.self
 		self.reuseIdentifier = reuseIdentifier
 		self.configure = { cell in

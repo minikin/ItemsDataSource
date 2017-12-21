@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ItemsDataSource: NSObject, UICollectionViewDataSource {
+open class ItemsDataSource: NSObject, UICollectionViewDataSource {
 	
 	var sections: [Groupable]?
 	var items: [Itemable]?
@@ -34,7 +34,7 @@ final class ItemsDataSource: NSObject, UICollectionViewDataSource {
 		self.cellDescriptor = cellDescriptor
 	}
 	
-	func numberOfSections(in collectionView: UICollectionView) -> Int {
+	public func numberOfSections(in collectionView: UICollectionView) -> Int {
 		if let sections = self.sections {
 			return sections.count
 		} else {
@@ -42,7 +42,7 @@ final class ItemsDataSource: NSObject, UICollectionViewDataSource {
 		}
 	}
 	
-	func collectionView(_ collectionView: UICollectionView,
+	public func collectionView(_ collectionView: UICollectionView,
 											numberOfItemsInSection section: Int) -> Int {
 		if let sections = self.sections {
 			return sections[section].items.count
@@ -51,7 +51,7 @@ final class ItemsDataSource: NSObject, UICollectionViewDataSource {
 		}
 	}
 	
-	func collectionView(_ collectionView: UICollectionView,
+	public func collectionView(_ collectionView: UICollectionView,
 											cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
 		if let sections = self.sections {
@@ -72,7 +72,7 @@ final class ItemsDataSource: NSObject, UICollectionViewDataSource {
 		}
 	}
 	
-	func collectionView(_ collectionView: UICollectionView,
+	public func collectionView(_ collectionView: UICollectionView,
 											viewForSupplementaryElementOfKind kind: String,
 											at indexPath: IndexPath) -> UICollectionReusableView {
 		switch kind {

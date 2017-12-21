@@ -6,7 +6,7 @@
 //  Copyright © 2017 Sasha Prokhorenko. All rights reserved.
 //
 
-protocol Groupable {
+public protocol Groupable {
 	var items: [Itemable] {get}
 	var supplementaryDescriptor: SupplementaryDescriptor? {get}
 }

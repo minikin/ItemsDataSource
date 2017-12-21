@@ -8,7 +8,6 @@
 
 import UIKit
 
-final class MainHeader: UICollectionReusableView {
+final class HealthyFoodHeader: UICollectionReusableView {
 	@IBOutlet weak var headerLabel: UILabel!
-	
 }

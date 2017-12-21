@@ -8,13 +8,13 @@
 
 import UIKit
 
-struct SupplementaryDescriptor {
+public struct SupplementaryDescriptor {
 	
-	let supplementaryClass: UICollectionReusableView.Type
-	let reuseIdentifier: String
-	let configure: (UICollectionReusableView) -> ()
+	public let supplementaryClass: UICollectionReusableView.Type
+	public let reuseIdentifier: String
+	public let configure: (UICollectionReusableView) -> ()
 	
-	init<SupplementaryView: UICollectionReusableView>(reuseIdentifier: String,
+	public init<SupplementaryView: UICollectionReusableView>(reuseIdentifier: String,
 																										configure: @escaping (SupplementaryView) -> ()) {
 		self.supplementaryClass = SupplementaryView.self
 		self.reuseIdentifier = reuseIdentifier

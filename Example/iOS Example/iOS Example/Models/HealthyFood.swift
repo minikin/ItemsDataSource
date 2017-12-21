@@ -6,9 +6,21 @@
 //  Copyright © 2017 Sasha Prokhorenko. All rights reserved.
 //
 
-import Foundation
+import ItemsDataSource
 
-struct HealthyFood {
+struct HealthyFood: Groupable {
 	let name: String
-	let food: [Any]
+	var items: [Itemable]
+	var supplementaryDescriptor: SupplementaryDescriptor? {
+		get {
+			return SupplementaryDescriptor(reuseIdentifier: ReuseIdentifier.healthyFoodHeader,
+																		 configure: self.configureHealthyFoodpHeader)
+		}
+	}
+}
+
+extension HealthyFood {
+	func configureHealthyFoodpHeader(_ header: HealthyFoodHeader) {
+		header.headerLabel.text = name
+	}
 }
