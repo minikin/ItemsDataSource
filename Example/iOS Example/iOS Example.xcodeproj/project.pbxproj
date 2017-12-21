@@ -14,13 +14,13 @@
 		FC1ED1DD1FE7F0B1002E50FD /* HealthyFoodHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1ED1DC1FE7F0B1002E50FD /* HealthyFoodHeader.swift */; };
 		FC1ED1DF1FE7F0C3002E50FD /* ExampleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1ED1DE1FE7F0C3002E50FD /* ExampleHeader.swift */; };
 		FC4D46C91FE9298D0012B681 /* CommonFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4D46C81FE9298D0012B681 /* CommonFlowLayout.swift */; };
-		FC6DA5401FEBA7A50042E8DA /* HealthyFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6DA53F1FEBA7A50042E8DA /* HealthyFood.swift */; };
-		FC6DA5441FEBA7C00042E8DA /* Fruits.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6DA5431FEBA7C00042E8DA /* Fruits.swift */; };
-		FC6DA5461FEBA80E0042E8DA /* Vegetables.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6DA5451FEBA80E0042E8DA /* Vegetables.swift */; };
-		FC6DA5481FEBAD150042E8DA /* Vitamin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6DA5471FEBAD150042E8DA /* Vitamin.swift */; };
+		FC6DA5401FEBA7A50042E8DA /* HealthyGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6DA53F1FEBA7A50042E8DA /* HealthyGroup.swift */; };
 		FC6DA5561FEBB47D0042E8DA /* ItemsDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7484F71FE7CB52002AB969 /* ItemsDataSource.framework */; };
 		FC6DA5571FEBB47D0042E8DA /* ItemsDataSource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC7484F71FE7CB52002AB969 /* ItemsDataSource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FC6DA55F1FEBB6BE0042E8DA /* ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6DA55E1FEBB6BE0042E8DA /* ReuseIdentifier.swift */; };
+		FC6DA5631FEBBF430042E8DA /* HealthyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6DA5621FEBBF430042E8DA /* HealthyType.swift */; };
+		FC6DA5661FEBBFB70042E8DA /* HealthyFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6DA5651FEBBFB70042E8DA /* HealthyFood.swift */; };
+		FC6DA5681FEBC0BF0042E8DA /* Vitamin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6DA5671FEBC0BE0042E8DA /* Vitamin.swift */; };
 		FC7484DF1FE7C733002AB969 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7484DE1FE7C733002AB969 /* AppDelegate.swift */; };
 		FC7484E41FE7C733002AB969 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7484E21FE7C733002AB969 /* Main.storyboard */; };
 		FC7484E61FE7C733002AB969 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7484E51FE7C733002AB969 /* Assets.xcassets */; };
@@ -73,11 +73,11 @@
 		FC1ED1DC1FE7F0B1002E50FD /* HealthyFoodHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyFoodHeader.swift; sourceTree = "<group>"; };
 		FC1ED1DE1FE7F0C3002E50FD /* ExampleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleHeader.swift; sourceTree = "<group>"; };
 		FC4D46C81FE9298D0012B681 /* CommonFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFlowLayout.swift; sourceTree = "<group>"; };
-		FC6DA53F1FEBA7A50042E8DA /* HealthyFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyFood.swift; sourceTree = "<group>"; };
-		FC6DA5431FEBA7C00042E8DA /* Fruits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruits.swift; sourceTree = "<group>"; };
-		FC6DA5451FEBA80E0042E8DA /* Vegetables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vegetables.swift; sourceTree = "<group>"; };
-		FC6DA5471FEBAD150042E8DA /* Vitamin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vitamin.swift; sourceTree = "<group>"; };
+		FC6DA53F1FEBA7A50042E8DA /* HealthyGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyGroup.swift; sourceTree = "<group>"; };
 		FC6DA55E1FEBB6BE0042E8DA /* ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifier.swift; sourceTree = "<group>"; };
+		FC6DA5621FEBBF430042E8DA /* HealthyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyType.swift; sourceTree = "<group>"; };
+		FC6DA5651FEBBFB70042E8DA /* HealthyFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyFood.swift; sourceTree = "<group>"; };
+		FC6DA5671FEBC0BE0042E8DA /* Vitamin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vitamin.swift; sourceTree = "<group>"; };
 		FC7484DB1FE7C733002AB969 /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7484DE1FE7C733002AB969 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC7484E31FE7C733002AB969 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,10 +120,10 @@
 		FC1ED1D01FE7D78C002E50FD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FC6DA53F1FEBA7A50042E8DA /* HealthyFood.swift */,
-				FC6DA5431FEBA7C00042E8DA /* Fruits.swift */,
-				FC6DA5451FEBA80E0042E8DA /* Vegetables.swift */,
-				FC6DA5471FEBAD150042E8DA /* Vitamin.swift */,
+				FC6DA5671FEBC0BE0042E8DA /* Vitamin.swift */,
+				FC6DA5651FEBBFB70042E8DA /* HealthyFood.swift */,
+				FC6DA53F1FEBA7A50042E8DA /* HealthyGroup.swift */,
+				FC6DA5621FEBBF430042E8DA /* HealthyType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -215,8 +215,8 @@
 		FC7484DD1FE7C733002AB969 /* iOS Example */ = {
 			isa = PBXGroup;
 			children = (
-				FC6DA55D1FEBB68A0042E8DA /* Constants */,
 				FC7484E51FE7C733002AB969 /* Assets.xcassets */,
+				FC6DA55D1FEBB68A0042E8DA /* Constants */,
 				FC1ED1D31FE7D7FD002E50FD /* FakeDataSource */,
 				FC1ED1D41FE7D80C002E50FD /* Layouts */,
 				FC1ED1D01FE7D78C002E50FD /* Models */,
@@ -334,17 +334,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC6DA5441FEBA7C00042E8DA /* Fruits.swift in Sources */,
 				FC4D46C91FE9298D0012B681 /* CommonFlowLayout.swift in Sources */,
 				FC1ED1DB1FE7EFE7002E50FD /* ExampleCell.swift in Sources */,
 				FC1ED1C91FE7D76F002E50FD /* MainViewController.swift in Sources */,
-				FC6DA5401FEBA7A50042E8DA /* HealthyFood.swift in Sources */,
+				FC6DA5401FEBA7A50042E8DA /* HealthyGroup.swift in Sources */,
+				FC6DA5681FEBC0BF0042E8DA /* Vitamin.swift in Sources */,
 				FC1ED1DF1FE7F0C3002E50FD /* ExampleHeader.swift in Sources */,
-				FC6DA5461FEBA80E0042E8DA /* Vegetables.swift in Sources */,
 				FC1ED1CD1FE7D779002E50FD /* ExampleViewController.swift in Sources */,
 				FC6DA55F1FEBB6BE0042E8DA /* ReuseIdentifier.swift in Sources */,
-				FC6DA5481FEBAD150042E8DA /* Vitamin.swift in Sources */,
 				FC1ED1DD1FE7F0B1002E50FD /* HealthyFoodHeader.swift in Sources */,
+				FC6DA5631FEBBF430042E8DA /* HealthyType.swift in Sources */,
+				FC6DA5661FEBBFB70042E8DA /* HealthyFood.swift in Sources */,
 				FC1ED1D91FE7EFDD002E50FD /* MainCell.swift in Sources */,
 				FC7484DF1FE7C733002AB969 /* AppDelegate.swift in Sources */,
 			);
