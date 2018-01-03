@@ -9,6 +9,7 @@
 import ItemsDataSource
 
 struct HealthyFood {
+	// MARK: - Instance Properties
 	let type: HealthyType
 	let name: String
 	let calories: String
@@ -21,7 +22,7 @@ struct HealthyFood {
 extension HealthyFood {
 	func configureHealthyFoodCell(_ cell: HealthyFoodCell) {
 		cell.cellLabel.text = name
-		cell.contentView.backgroundColor = .gray
+		cell.contentView.backgroundColor = .lightGray
 	}
 }
 

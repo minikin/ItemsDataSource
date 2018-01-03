@@ -20,13 +20,14 @@ final class MainViewController: UIViewController {
 	@IBOutlet weak var mainCollectionView: UICollectionView! {
 		didSet {
 			healthyDataSourse.sections = healthyFood
+			mainCollectionView.dataSource = healthyDataSourse
 			let layout = CommonFlowLayout(columns: 1,
 																		itemHeight: 60,
-																		inset: 5,
-																		spacing: 5,
+																		inset: 0,
+																		spacing: 0,
 																		lineSpacing: 10)
 			mainCollectionView.collectionViewLayout = layout
-			mainCollectionView.dataSource = healthyDataSourse
+			mainCollectionView.delegate = self
 			mainCollectionView.reloadData()
 		}
 	}
@@ -41,3 +42,13 @@ final class MainViewController: UIViewController {
 
 
 }
+
+extension MainViewController: UICollectionViewDelegateFlowLayout {
+	func collectionView(_ collectionView: UICollectionView,
+											layout collectionViewLayout: UICollectionViewLayout,
+											referenceSizeForHeaderInSection section: Int) -> CGSize {
+		return CGSize(width: collectionView.bounds.width, height: 70)
+	}
+}
+
+extension MainViewController: UICollectionViewDelegate {}

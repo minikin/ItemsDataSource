@@ -9,10 +9,10 @@
 import Foundation
 
 let vitamins = [Vitamin(name: "A", ammount: 0.012),
-										 Vitamin(name: "B", ammount: 0.35),
-										 Vitamin(name: "C", ammount: 0.099),
-										 Vitamin(name: "D", ammount: 0.000122),
-										 Vitamin(name: "B12", ammount: 0.5)
+								Vitamin(name: "B", ammount: 0.35),
+								Vitamin(name: "C", ammount: 0.099),
+								Vitamin(name: "D", ammount: 0.000122),
+								Vitamin(name: "B12", ammount: 0.5)
 ]
 
 let apple = HealthyFood(type: .fruit, name: "Apple", calories: "52", fat: "0,2", protein: "0,3", carbohydrate: "14", vitamins: vitamins)
@@ -27,6 +27,6 @@ let celery = HealthyFood(type: .vegetable, name: "Celery", calories: "8", fat: "
 
 
 let fruits = HealthyGroup(name: .fruit, items: [apple, pear, banana, grape, persimmon])
-let vegetables = HealthyGroup(name: .fruit, items: [artichokes, cauliflower, celery])
+let vegetables = HealthyGroup(name: .vegetable, items: [artichokes, cauliflower, celery])
 
 let healthyFood = [fruits, vegetables]
