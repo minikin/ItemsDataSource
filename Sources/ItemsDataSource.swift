@@ -10,12 +10,12 @@ import UIKit
 
 open class ItemsDataSource: NSObject, UICollectionViewDataSource {
 	
-	var sections: [Groupable]?
-	var items: [Itemable]?
+	public var sections: [Groupable]?
+	public var items: [Itemable]?
 	let supplementaryDescriptor: ((Groupable) -> SupplementaryDescriptor)?
 	let cellDescriptor: (Itemable) -> CellDescriptor
 	
-	init(sections: [Groupable],
+	public init(sections: [Groupable],
 			 supplementaryDescriptor:  @escaping (Groupable) -> SupplementaryDescriptor,
 			 cellDescriptor: @escaping (Itemable) -> CellDescriptor) {
 		
@@ -25,7 +25,7 @@ open class ItemsDataSource: NSObject, UICollectionViewDataSource {
 		self.items = nil
 	}
 	
-	init(items: [Itemable],
+	public init(items: [Itemable],
 			 cellDescriptor: @escaping (Itemable) -> CellDescriptor) {
 		
 		self.sections = nil

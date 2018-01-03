@@ -9,7 +9,7 @@
 import ItemsDataSource
 
 struct HealthyGroup: Groupable {
-	let name: String
+	let name: HealthyType
 	var items: [Itemable]
 	var supplementaryDescriptor: SupplementaryDescriptor? {
 		get {
@@ -21,6 +21,6 @@ struct HealthyGroup: Groupable {
 
 extension HealthyGroup {
 	func configureHealthyFoodpHeader(_ header: HealthyFoodHeader) {
-		header.headerLabel.text = name
+		header.headerLabel.text = name.rawValue
 	}
 }

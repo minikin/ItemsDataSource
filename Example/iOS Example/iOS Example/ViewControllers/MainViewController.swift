@@ -7,12 +7,29 @@
 //
 
 import UIKit
+import ItemsDataSource
 
 final class MainViewController: UIViewController {
 	
-	// MARK: - Instance Properties
+	// MARK: - Injections
+	public var healthyDataSourse = ItemsDataSource(sections: [HealthyGroup](),
+																										 supplementaryDescriptor: {$0.supplementaryDescriptor!},
+																										 cellDescriptor: { $0.itemCellDescriptor })
 	
-	@IBOutlet weak var mainCollectionView: UICollectionView!
+	// MARK: - Instance Properties
+	@IBOutlet weak var mainCollectionView: UICollectionView! {
+		didSet {
+			healthyDataSourse.sections = healthyFood
+			let layout = CommonFlowLayout(columns: 1,
+																		itemHeight: 60,
+																		inset: 5,
+																		spacing: 5,
+																		lineSpacing: 10)
+			mainCollectionView.collectionViewLayout = layout
+			mainCollectionView.dataSource = healthyDataSourse
+			mainCollectionView.reloadData()
+		}
+	}
 	
 	// MARK: - ViewController LifeCycle
 	override func viewDidLoad() {

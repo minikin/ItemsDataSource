@@ -6,12 +6,31 @@
 //  Copyright © 2017 Sasha Prokhorenko. All rights reserved.
 //
 
+import ItemsDataSource
+
 struct HealthyFood {
-	let foodType: HealthyType
+	let type: HealthyType
 	let name: String
 	let calories: String
 	let fat: String
 	let protein: String
 	let carbohydrate: String
 	let vitamins: [Vitamin]
+}
+
+extension HealthyFood {
+	func configureHealthyFoodCell(_ cell: HealthyFoodCell) {
+		cell.cellLabel.text = name
+		cell.contentView.backgroundColor = .gray
+	}
+}
+
+
+extension HealthyFood: Itemable {
+	var itemCellDescriptor: CellDescriptor {
+		get {
+			return CellDescriptor(reuseIdentifier: ReuseIdentifier.healthyFoodCell,
+														configure: self.configureHealthyFoodCell)
+		}
+	}
 }

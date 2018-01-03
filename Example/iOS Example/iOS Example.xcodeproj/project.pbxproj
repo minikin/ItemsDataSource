@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		FC1ED1C91FE7D76F002E50FD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1ED1C81FE7D76F002E50FD /* MainViewController.swift */; };
 		FC1ED1CD1FE7D779002E50FD /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1ED1CC1FE7D779002E50FD /* ExampleViewController.swift */; };
-		FC1ED1D91FE7EFDD002E50FD /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1ED1D81FE7EFDD002E50FD /* MainCell.swift */; };
+		FC1ED1D91FE7EFDD002E50FD /* HealthyFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1ED1D81FE7EFDD002E50FD /* HealthyFoodCell.swift */; };
 		FC1ED1DB1FE7EFE7002E50FD /* ExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1ED1DA1FE7EFE7002E50FD /* ExampleCell.swift */; };
 		FC1ED1DD1FE7F0B1002E50FD /* HealthyFoodHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1ED1DC1FE7F0B1002E50FD /* HealthyFoodHeader.swift */; };
 		FC1ED1DF1FE7F0C3002E50FD /* ExampleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1ED1DE1FE7F0C3002E50FD /* ExampleHeader.swift */; };
@@ -25,6 +25,8 @@
 		FC7484E41FE7C733002AB969 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7484E21FE7C733002AB969 /* Main.storyboard */; };
 		FC7484E61FE7C733002AB969 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7484E51FE7C733002AB969 /* Assets.xcassets */; };
 		FC7484E91FE7C733002AB969 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7484E71FE7C733002AB969 /* LaunchScreen.storyboard */; };
+		FC945CB51FEBDFBB00CE19F4 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC945CB41FEBDFBB00CE19F4 /* DataSource.swift */; };
+		FC945CB71FEBE65300CE19F4 /* HealthyFoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC945CB61FEBE65300CE19F4 /* HealthyFoodViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +70,7 @@
 /* Begin PBXFileReference section */
 		FC1ED1C81FE7D76F002E50FD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FC1ED1CC1FE7D779002E50FD /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
-		FC1ED1D81FE7EFDD002E50FD /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		FC1ED1D81FE7EFDD002E50FD /* HealthyFoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyFoodCell.swift; sourceTree = "<group>"; };
 		FC1ED1DA1FE7EFE7002E50FD /* ExampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCell.swift; sourceTree = "<group>"; };
 		FC1ED1DC1FE7F0B1002E50FD /* HealthyFoodHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyFoodHeader.swift; sourceTree = "<group>"; };
 		FC1ED1DE1FE7F0C3002E50FD /* ExampleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleHeader.swift; sourceTree = "<group>"; };
@@ -85,6 +87,8 @@
 		FC7484E81FE7C733002AB969 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC7484EA1FE7C733002AB969 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC7484F11FE7CB52002AB969 /* ItemsDataSource.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ItemsDataSource.xcodeproj; path = ../../ItemsDataSource.xcodeproj; sourceTree = "<group>"; };
+		FC945CB41FEBDFBB00CE19F4 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		FC945CB61FEBE65300CE19F4 /* HealthyFoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyFoodViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,11 +150,12 @@
 			path = "Storyboards and Xibs";
 			sourceTree = "<group>";
 		};
-		FC1ED1D31FE7D7FD002E50FD /* FakeDataSource */ = {
+		FC1ED1D31FE7D7FD002E50FD /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				FC945CB41FEBDFBB00CE19F4 /* DataSource.swift */,
 			);
-			path = FakeDataSource;
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		FC1ED1D41FE7D80C002E50FD /* Layouts */ = {
@@ -164,7 +169,7 @@
 		FC1ED1D61FE7D829002E50FD /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				FC1ED1D81FE7EFDD002E50FD /* MainCell.swift */,
+				FC1ED1D81FE7EFDD002E50FD /* HealthyFoodCell.swift */,
 				FC1ED1DA1FE7EFE7002E50FD /* ExampleCell.swift */,
 			);
 			path = Cells;
@@ -217,12 +222,13 @@
 			children = (
 				FC7484E51FE7C733002AB969 /* Assets.xcassets */,
 				FC6DA55D1FEBB68A0042E8DA /* Constants */,
-				FC1ED1D31FE7D7FD002E50FD /* FakeDataSource */,
+				FC1ED1D31FE7D7FD002E50FD /* DataSource */,
 				FC1ED1D41FE7D80C002E50FD /* Layouts */,
 				FC1ED1D01FE7D78C002E50FD /* Models */,
 				FC1ED1D21FE7D79C002E50FD /* Storyboards and Xibs */,
 				FC1ED1D11FE7D791002E50FD /* Supporting Files */,
 				FC1ED1CE1FE7D77D002E50FD /* ViewControllers */,
+				FC945CB81FEBE65B00CE19F4 /* ViewModels */,
 				FC1ED1CF1FE7D787002E50FD /* Views */,
 			);
 			path = "iOS Example";
@@ -235,6 +241,14 @@
 				FC7484F91FE7CB52002AB969 /* ItemsDataSource-iOS Tests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FC945CB81FEBE65B00CE19F4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FC945CB61FEBE65300CE19F4 /* HealthyFoodViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC945CB51FEBDFBB00CE19F4 /* DataSource.swift in Sources */,
 				FC4D46C91FE9298D0012B681 /* CommonFlowLayout.swift in Sources */,
 				FC1ED1DB1FE7EFE7002E50FD /* ExampleCell.swift in Sources */,
 				FC1ED1C91FE7D76F002E50FD /* MainViewController.swift in Sources */,
@@ -343,9 +358,10 @@
 				FC1ED1CD1FE7D779002E50FD /* ExampleViewController.swift in Sources */,
 				FC6DA55F1FEBB6BE0042E8DA /* ReuseIdentifier.swift in Sources */,
 				FC1ED1DD1FE7F0B1002E50FD /* HealthyFoodHeader.swift in Sources */,
+				FC945CB71FEBE65300CE19F4 /* HealthyFoodViewModel.swift in Sources */,
 				FC6DA5631FEBBF430042E8DA /* HealthyType.swift in Sources */,
 				FC6DA5661FEBBFB70042E8DA /* HealthyFood.swift in Sources */,
-				FC1ED1D91FE7EFDD002E50FD /* MainCell.swift in Sources */,
+				FC1ED1D91FE7EFDD002E50FD /* HealthyFoodCell.swift in Sources */,
 				FC7484DF1FE7C733002AB969 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
