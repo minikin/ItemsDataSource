@@ -1,6 +1,6 @@
 //
 //  ItemsDataSource.swift
-//  RPonSB
+//  ItemsDataSource
 //
 //  Created by Sasha Prokhorenko on 06.12.17.
 //  Copyright © 2017 Sasha Prokhorenko. All rights reserved.
@@ -10,11 +10,13 @@ import UIKit
 
 open class ItemsDataSource: NSObject, UICollectionViewDataSource {
 	
+	// MARK: - Instance Properties
 	public var sections: [Groupable]?
 	public var items: [Itemable]?
-	let supplementaryDescriptor: ((Groupable) -> SupplementaryDescriptor)?
-	let cellDescriptor: (Itemable) -> CellDescriptor
+	public let supplementaryDescriptor: ((Groupable) -> SupplementaryDescriptor)?
+	public let cellDescriptor: (Itemable) -> CellDescriptor
 	
+	// MARK: - Object lifecycle
 	public init(sections: [Groupable],
 			 supplementaryDescriptor:  @escaping (Groupable) -> SupplementaryDescriptor,
 			 cellDescriptor: @escaping (Itemable) -> CellDescriptor) {
@@ -34,6 +36,7 @@ open class ItemsDataSource: NSObject, UICollectionViewDataSource {
 		self.cellDescriptor = cellDescriptor
 	}
 	
+	// MARK: - UICollectionViewDataSource
 	public func numberOfSections(in collectionView: UICollectionView) -> Int {
 		if let sections = self.sections {
 			return sections.count

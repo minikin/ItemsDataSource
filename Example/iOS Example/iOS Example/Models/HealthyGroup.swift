@@ -22,5 +22,6 @@ struct HealthyGroup: Groupable {
 extension HealthyGroup {
 	func configureHealthyFoodpHeader(_ header: HealthyFoodHeader) {
 		header.headerLabel.text = name.rawValue
+		header.backgroundColor = .blue
 	}
 }
