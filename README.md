@@ -89,8 +89,14 @@ dependencies: [
 ### Manually
 
 If you prefer not to use any of the aforementioned dependency managers, you can integrate ItemsDataSource into your project manually.
-
-
+Just copy files from `Sources` folder to your projects:
+```
+CellDescriptor.swift
+Groupable.swift
+Itemable.swift
+ItemsDataSource.swift
+SupplementaryDescriptor.swift
+```
 ## License
 
 ItemsDataSource is released under the MIT license. [See LICENSE](https://github.com/minikin/ItemsDataSource/blob/master/LICENSE) for details.
