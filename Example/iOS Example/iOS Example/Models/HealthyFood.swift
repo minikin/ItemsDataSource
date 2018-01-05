@@ -6,6 +6,7 @@
 //  Copyright © 2017 Sasha Prokhorenko. All rights reserved.
 //
 
+import UIKit
 import ItemsDataSource
 
 struct HealthyFood {
@@ -21,8 +22,9 @@ struct HealthyFood {
 
 extension HealthyFood {
 	func configureHealthyFoodCell(_ cell: HealthyFoodCell) {
+		cell.healthyModel = self
 		cell.cellLabel.text = name
-		cell.contentView.backgroundColor = .lightGray
+		cell.contentView.backgroundColor = UIColor.randomColor()
 	}
 }
 
@@ -33,5 +35,15 @@ extension HealthyFood: Itemable {
 			return CellDescriptor(reuseIdentifier: ReuseIdentifier.healthyFoodCell,
 														configure: self.configureHealthyFoodCell)
 		}
+	}
+}
+
+extension HealthyFood: Comparable {
+	static func <(lhs: HealthyFood, rhs: HealthyFood) -> Bool {
+		return lhs.name == rhs.name
+	}
+	
+	static func ==(lhs: HealthyFood, rhs: HealthyFood) -> Bool {
+		return lhs.name == rhs.name
 	}
 }

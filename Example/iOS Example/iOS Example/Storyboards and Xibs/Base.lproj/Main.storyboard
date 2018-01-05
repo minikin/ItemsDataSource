@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Healthy Food-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,7 +36,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CellLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbZ-qx-Lnb">
-                                                    <rect key="frame" x="20" y="26.5" width="325.5" height="18"/>
+                                                    <rect key="frame" x="20" y="27" width="326" height="18"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -84,7 +84,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Giz-7X-dhn"/>
+                    <navigationItem key="navigationItem" title="Healthy Food" id="Giz-7X-dhn"/>
                     <connections>
                         <outlet property="mainCollectionView" destination="iAZ-ba-RtK" id="92Z-lG-vtP"/>
                         <segue destination="T0o-s1-0BS" kind="show" identifier="toExample" id="SqV-1h-Tzj"/>
@@ -94,7 +94,7 @@
             </objects>
             <point key="canvasLocation" x="228" y="133"/>
         </scene>
-        <!--Example-->
+        <!--Vitamins-->
         <scene sceneID="Ccy-jl-ahq">
             <objects>
                 <viewController id="T0o-s1-0BS" customClass="ExampleViewController" customModule="iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -106,21 +106,21 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B0v-Wc-tU6">
-                                    <size key="itemSize" width="375" height="50"/>
-                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="itemSize" width="355" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExampleCell" id="Vvl-8Q-BQH" customClass="ExampleCell" customModule="iOS_Example" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="375" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VitaminCell" id="Vvl-8Q-BQH" customClass="ViataminCell" customModule="iOS_Example" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="355" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syg-9U-m4F">
-                                                    <rect key="frame" x="20" y="16.5" width="355" height="18"/>
+                                                    <rect key="frame" x="20" y="16.5" width="336" height="18"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -133,30 +133,10 @@
                                             <constraint firstItem="Syg-9U-m4F" firstAttribute="leading" secondItem="Vvl-8Q-BQH" secondAttribute="leading" constant="20" id="qca-yo-iS9"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="exampleCellLabel" destination="Syg-9U-m4F" id="sdB-iT-hiH"/>
+                                            <outlet property="vitaminNameLabel" destination="Syg-9U-m4F" id="sdB-iT-hiH"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="ExampleHeader" id="EeP-9K-FS8" customClass="ExampleHeader" customModule="iOS_Example" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nv-ef-SZU">
-                                            <rect key="frame" x="20" y="15" width="335" height="21"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="8nv-ef-SZU" firstAttribute="leading" secondItem="EeP-9K-FS8" secondAttribute="leading" constant="20" id="BeZ-lD-i5K"/>
-                                        <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="8nv-ef-SZU" secondAttribute="trailing" constant="20" symbolic="YES" id="IhX-DJ-C7C"/>
-                                        <constraint firstItem="8nv-ef-SZU" firstAttribute="centerY" secondItem="EeP-9K-FS8" secondAttribute="centerY" id="gz2-LK-SFt"/>
-                                    </constraints>
-                                    <connections>
-                                        <outlet property="exampleHeaderLabel" destination="8nv-ef-SZU" id="YwL-Vz-pl4"/>
-                                    </connections>
-                                </collectionReusableView>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -168,7 +148,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D5N-vE-Yk7"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Example" id="xkJ-WA-aPE"/>
+                    <navigationItem key="navigationItem" title="Vitamins" id="xkJ-WA-aPE"/>
                     <connections>
                         <outlet property="exampleCollectionView" destination="ZHK-1J-lYf" id="pf2-Hb-y9P"/>
                     </connections>

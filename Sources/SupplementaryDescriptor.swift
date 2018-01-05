@@ -17,7 +17,7 @@ public struct SupplementaryDescriptor {
 	
 	// MARK: - Object lifecycle
 	public init<SupplementaryView: UICollectionReusableView>(reuseIdentifier: String,
-																										configure: @escaping (SupplementaryView) -> ()) {
+																													 configure: @escaping (SupplementaryView) -> ()) {
 		self.supplementaryClass = SupplementaryView.self
 		self.reuseIdentifier = reuseIdentifier
 		self.configure = { supplementaryView in

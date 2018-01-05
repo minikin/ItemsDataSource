@@ -10,9 +10,10 @@
 		FC1ED1C91FE7D76F002E50FD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1ED1C81FE7D76F002E50FD /* MainViewController.swift */; };
 		FC1ED1CD1FE7D779002E50FD /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1ED1CC1FE7D779002E50FD /* ExampleViewController.swift */; };
 		FC1ED1D91FE7EFDD002E50FD /* HealthyFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1ED1D81FE7EFDD002E50FD /* HealthyFoodCell.swift */; };
-		FC1ED1DB1FE7EFE7002E50FD /* ExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1ED1DA1FE7EFE7002E50FD /* ExampleCell.swift */; };
+		FC1ED1DB1FE7EFE7002E50FD /* ViataminCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1ED1DA1FE7EFE7002E50FD /* ViataminCell.swift */; };
 		FC1ED1DD1FE7F0B1002E50FD /* HealthyFoodHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1ED1DC1FE7F0B1002E50FD /* HealthyFoodHeader.swift */; };
 		FC1ED1DF1FE7F0C3002E50FD /* ExampleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1ED1DE1FE7F0C3002E50FD /* ExampleHeader.swift */; };
+		FC426D821FFFB4950094B840 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC426D811FFFB4950094B840 /* UIColor+Extensions.swift */; };
 		FC4D46C91FE9298D0012B681 /* CommonFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4D46C81FE9298D0012B681 /* CommonFlowLayout.swift */; };
 		FC6DA5401FEBA7A50042E8DA /* HealthyGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6DA53F1FEBA7A50042E8DA /* HealthyGroup.swift */; };
 		FC6DA5561FEBB47D0042E8DA /* ItemsDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7484F71FE7CB52002AB969 /* ItemsDataSource.framework */; };
@@ -27,6 +28,7 @@
 		FC7484E91FE7C733002AB969 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7484E71FE7C733002AB969 /* LaunchScreen.storyboard */; };
 		FC945CB51FEBDFBB00CE19F4 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC945CB41FEBDFBB00CE19F4 /* DataSource.swift */; };
 		FC945CB71FEBE65300CE19F4 /* HealthyFoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC945CB61FEBE65300CE19F4 /* HealthyFoodViewModel.swift */; };
+		FCDA08F81FFE737F00FB2F9C /* SegueIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDA08F71FFE737F00FB2F9C /* SegueIdentifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,9 +73,10 @@
 		FC1ED1C81FE7D76F002E50FD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FC1ED1CC1FE7D779002E50FD /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		FC1ED1D81FE7EFDD002E50FD /* HealthyFoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyFoodCell.swift; sourceTree = "<group>"; };
-		FC1ED1DA1FE7EFE7002E50FD /* ExampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCell.swift; sourceTree = "<group>"; };
+		FC1ED1DA1FE7EFE7002E50FD /* ViataminCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViataminCell.swift; sourceTree = "<group>"; };
 		FC1ED1DC1FE7F0B1002E50FD /* HealthyFoodHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyFoodHeader.swift; sourceTree = "<group>"; };
 		FC1ED1DE1FE7F0C3002E50FD /* ExampleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleHeader.swift; sourceTree = "<group>"; };
+		FC426D811FFFB4950094B840 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		FC4D46C81FE9298D0012B681 /* CommonFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFlowLayout.swift; sourceTree = "<group>"; };
 		FC6DA53F1FEBA7A50042E8DA /* HealthyGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyGroup.swift; sourceTree = "<group>"; };
 		FC6DA55E1FEBB6BE0042E8DA /* ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifier.swift; sourceTree = "<group>"; };
@@ -89,6 +92,7 @@
 		FC7484F11FE7CB52002AB969 /* ItemsDataSource.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ItemsDataSource.xcodeproj; path = ../../ItemsDataSource.xcodeproj; sourceTree = "<group>"; };
 		FC945CB41FEBDFBB00CE19F4 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		FC945CB61FEBE65300CE19F4 /* HealthyFoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyFoodViewModel.swift; sourceTree = "<group>"; };
+		FCDA08F71FFE737F00FB2F9C /* SegueIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				FC1ED1D81FE7EFDD002E50FD /* HealthyFoodCell.swift */,
-				FC1ED1DA1FE7EFE7002E50FD /* ExampleCell.swift */,
+				FC1ED1DA1FE7EFE7002E50FD /* ViataminCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -184,6 +188,14 @@
 			path = "Headers & Footers";
 			sourceTree = "<group>";
 		};
+		FC426D801FFFB4820094B840 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FC426D811FFFB4950094B840 /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FC6DA54D1FEBB4660042E8DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				FC6DA55E1FEBB6BE0042E8DA /* ReuseIdentifier.swift */,
+				FCDA08F71FFE737F00FB2F9C /* SegueIdentifier.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -220,6 +233,7 @@
 		FC7484DD1FE7C733002AB969 /* iOS Example */ = {
 			isa = PBXGroup;
 			children = (
+				FC426D801FFFB4820094B840 /* Extensions */,
 				FC7484E51FE7C733002AB969 /* Assets.xcassets */,
 				FC6DA55D1FEBB68A0042E8DA /* Constants */,
 				FC1ED1D31FE7D7FD002E50FD /* DataSource */,
@@ -350,7 +364,7 @@
 			files = (
 				FC945CB51FEBDFBB00CE19F4 /* DataSource.swift in Sources */,
 				FC4D46C91FE9298D0012B681 /* CommonFlowLayout.swift in Sources */,
-				FC1ED1DB1FE7EFE7002E50FD /* ExampleCell.swift in Sources */,
+				FC1ED1DB1FE7EFE7002E50FD /* ViataminCell.swift in Sources */,
 				FC1ED1C91FE7D76F002E50FD /* MainViewController.swift in Sources */,
 				FC6DA5401FEBA7A50042E8DA /* HealthyGroup.swift in Sources */,
 				FC6DA5681FEBC0BF0042E8DA /* Vitamin.swift in Sources */,
@@ -361,7 +375,9 @@
 				FC945CB71FEBE65300CE19F4 /* HealthyFoodViewModel.swift in Sources */,
 				FC6DA5631FEBBF430042E8DA /* HealthyType.swift in Sources */,
 				FC6DA5661FEBBFB70042E8DA /* HealthyFood.swift in Sources */,
+				FCDA08F81FFE737F00FB2F9C /* SegueIdentifier.swift in Sources */,
 				FC1ED1D91FE7EFDD002E50FD /* HealthyFoodCell.swift in Sources */,
+				FC426D821FFFB4950094B840 /* UIColor+Extensions.swift in Sources */,
 				FC7484DF1FE7C733002AB969 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

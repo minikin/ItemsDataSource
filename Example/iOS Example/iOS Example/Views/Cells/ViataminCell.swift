@@ -1,5 +1,5 @@
 //
-//  ExampleCell.swift
+//  ViataminCell.swift
 //  iOS Example
 //
 //  Created by Sasha Prokhorenko on 18.12.17.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-final class ExampleCell: UICollectionViewCell {
-	@IBOutlet weak var exampleCellLabel: UILabel!
+final class ViataminCell: UICollectionViewCell {
+	@IBOutlet weak var vitaminNameLabel: UILabel!
 }

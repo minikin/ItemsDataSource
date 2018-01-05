@@ -7,25 +7,50 @@
 //
 
 import UIKit
+import ItemsDataSource
 
 final class ExampleViewController: UIViewController {
 	
+	// MARK: - Injections
+	public var vitaminsDataSourse = ItemsDataSource(items: [Vitamin](),
+																								 cellDescriptor: { $0.itemCellDescriptor })
 	
 	// MARK: - IBOutlets
-	@IBOutlet weak var exampleCollectionView: UICollectionView!
-	
+	@IBOutlet weak var exampleCollectionView: UICollectionView! {
+		didSet {
+			setExampleCollectionViewDataSource() 
+			exampleCollectionView.delegate = self
+			setExampleCollectionViewLayout()
+			exampleCollectionView.reloadData()
+		}
+	}
+
 	// MARK: - Instance Properties
-	
-	
-	
+	var vitamins = [Vitamin]()
+
 	// MARK: - ViewController LifeCycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
+		
+		print("vitamins", vitamins)
 	}
 	
+	// MARK: - Helpers
+	func setExampleCollectionViewDataSource() {
+		vitaminsDataSourse.items = vitamins
+		exampleCollectionView.dataSource = vitaminsDataSourse
+	}
 	
-
-
-
+	func setExampleCollectionViewLayout() {
+		let layout = CommonFlowLayout(columns: 2,
+																	itemHeight: 200,
+																	inset: 5,
+																	spacing: 0,
+																	lineSpacing: 5)
+		exampleCollectionView.collectionViewLayout = layout
+	}
+	
 }
+
+	// MARK: - UICollectionViewDelegate
+extension ExampleViewController: UICollectionViewDelegate {}

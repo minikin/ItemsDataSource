@@ -18,8 +18,8 @@ open class ItemsDataSource: NSObject, UICollectionViewDataSource {
 	
 	// MARK: - Object lifecycle
 	public init(sections: [Groupable],
-			 supplementaryDescriptor:  @escaping (Groupable) -> SupplementaryDescriptor,
-			 cellDescriptor: @escaping (Itemable) -> CellDescriptor) {
+							supplementaryDescriptor:	@escaping (Groupable) -> SupplementaryDescriptor,
+							cellDescriptor: @escaping (Itemable) -> CellDescriptor) {
 		
 		self.supplementaryDescriptor = supplementaryDescriptor
 		self.cellDescriptor = cellDescriptor
@@ -28,7 +28,7 @@ open class ItemsDataSource: NSObject, UICollectionViewDataSource {
 	}
 	
 	public init(items: [Itemable],
-			 cellDescriptor: @escaping (Itemable) -> CellDescriptor) {
+							cellDescriptor: @escaping (Itemable) -> CellDescriptor) {
 		
 		self.sections = nil
 		self.supplementaryDescriptor = nil
@@ -46,7 +46,7 @@ open class ItemsDataSource: NSObject, UICollectionViewDataSource {
 	}
 	
 	public func collectionView(_ collectionView: UICollectionView,
-											numberOfItemsInSection section: Int) -> Int {
+														 numberOfItemsInSection section: Int) -> Int {
 		if let sections = self.sections {
 			return sections[section].items.count
 		} else {
@@ -55,7 +55,7 @@ open class ItemsDataSource: NSObject, UICollectionViewDataSource {
 	}
 	
 	public func collectionView(_ collectionView: UICollectionView,
-											cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+														 cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
 		if let sections = self.sections {
 			let item = sections[indexPath.section].items[indexPath.row]
@@ -76,8 +76,8 @@ open class ItemsDataSource: NSObject, UICollectionViewDataSource {
 	}
 	
 	public func collectionView(_ collectionView: UICollectionView,
-											viewForSupplementaryElementOfKind kind: String,
-											at indexPath: IndexPath) -> UICollectionReusableView {
+														 viewForSupplementaryElementOfKind kind: String,
+														 at indexPath: IndexPath) -> UICollectionReusableView {
 		switch kind {
 			case UICollectionElementKindSectionHeader:
 				if let sections = self.sections {

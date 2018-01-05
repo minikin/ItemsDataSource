@@ -16,14 +16,16 @@ final class CommonFlowLayout: UICollectionViewFlowLayout {
 	let inset: CGFloat
 	let spacing: CGFloat
 	let lineSpacing: CGFloat
+	let withHeader: Bool
 	
 	// MARK: - Init
-	init(columns: CGFloat, itemHeight: CGFloat, inset: CGFloat, spacing: CGFloat, lineSpacing: CGFloat) {
+	init(columns: CGFloat, itemHeight: CGFloat, inset: CGFloat, spacing: CGFloat, lineSpacing: CGFloat, withHeader: Bool = false) {
 		self.columns = columns
 		self.itemHeight = itemHeight
 		self.inset = inset
 		self.spacing = spacing
 		self.lineSpacing = lineSpacing
+		self.withHeader = withHeader
 		super.init()
 	}
 	
@@ -53,6 +55,9 @@ final class CommonFlowLayout: UICollectionViewFlowLayout {
 	func setupLayout() {
 		minimumInteritemSpacing = spacing
 		minimumLineSpacing = lineSpacing
+		if withHeader == true {
+			headerReferenceSize = CGSize(width: itemWidth(), height: 80)
+		}
 	}
 	
 	override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint) -> CGPoint {

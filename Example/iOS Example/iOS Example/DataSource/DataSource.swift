@@ -26,7 +26,7 @@ let cauliflower = HealthyFood(type: .vegetable, name: "Cauliflower", calories: "
 let celery = HealthyFood(type: .vegetable, name: "Celery", calories: "8", fat: "0,1", protein: "0,4", carbohydrate: "0,9", vitamins: vitamins)
 
 
-let fruits = HealthyGroup(name: .fruit, items: [apple, pear, banana, grape, persimmon])
-let vegetables = HealthyGroup(name: .vegetable, items: [artichokes, cauliflower, celery])
+let fruits = HealthyGroup(name: .fruit, items: [apple, pear, banana, grape, persimmon].sorted())
+let vegetables = HealthyGroup(name: .vegetable, items: [artichokes, cauliflower, celery].sorted())
 
 let healthyFood = [fruits, vegetables]

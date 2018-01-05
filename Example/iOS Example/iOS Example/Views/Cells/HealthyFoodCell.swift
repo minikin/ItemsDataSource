@@ -9,5 +9,10 @@
 import UIKit
 
 final class HealthyFoodCell: UICollectionViewCell {
+	
+	// MARK: - IBOutlets
 	@IBOutlet weak var cellLabel: UILabel!
+	
+	// MARK: - Instance Properties
+	var healthyModel: HealthyFood?
 }
