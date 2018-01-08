@@ -7,7 +7,7 @@
     </a>
 </p>
 
-<img src="https://j.gifs.com/PZ5v6y.gif" width=300 />
+<img src="https://github.com/minikin/ItemsDataSource/blob/master/demo.gif?raw=true" width=300 />
 
 
 ItemsDataSource is an generic datasource for UICollectionView.
