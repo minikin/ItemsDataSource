@@ -103,24 +103,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZHK-1J-lYf">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="8" y="72" width="359" height="575"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B0v-Wc-tU6">
-                                    <size key="itemSize" width="355" height="50"/>
+                                    <size key="itemSize" width="320" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VitaminCell" id="Vvl-8Q-BQH" customClass="ViataminCell" customModule="iOS_Example" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="10" width="355" height="50"/>
+                                        <rect key="frame" x="19.5" y="10" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="355" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syg-9U-m4F">
-                                                    <rect key="frame" x="20" y="16.5" width="336" height="18"/>
+                                                    <rect key="frame" x="141.5" y="16.5" width="37.5" height="18"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -128,9 +128,8 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Syg-9U-m4F" secondAttribute="trailing" symbolic="YES" id="DXG-Yx-bpB"/>
-                                            <constraint firstItem="Syg-9U-m4F" firstAttribute="centerY" secondItem="Vvl-8Q-BQH" secondAttribute="centerY" id="UWI-wo-Ep9"/>
-                                            <constraint firstItem="Syg-9U-m4F" firstAttribute="leading" secondItem="Vvl-8Q-BQH" secondAttribute="leading" constant="20" id="qca-yo-iS9"/>
+                                            <constraint firstItem="Syg-9U-m4F" firstAttribute="centerX" secondItem="Vvl-8Q-BQH" secondAttribute="centerX" id="5lC-X5-wl6"/>
+                                            <constraint firstItem="Syg-9U-m4F" firstAttribute="centerY" secondItem="Vvl-8Q-BQH" secondAttribute="centerY" id="69t-6x-JU8"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="vitaminNameLabel" destination="Syg-9U-m4F" id="sdB-iT-hiH"/>
@@ -141,10 +140,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ZHK-1J-lYf" firstAttribute="bottom" secondItem="D5N-vE-Yk7" secondAttribute="bottom" id="U5G-W3-KJc"/>
-                            <constraint firstItem="ZHK-1J-lYf" firstAttribute="trailing" secondItem="D5N-vE-Yk7" secondAttribute="trailing" id="cOm-O4-crX"/>
-                            <constraint firstItem="ZHK-1J-lYf" firstAttribute="leading" secondItem="D5N-vE-Yk7" secondAttribute="leading" id="lBJ-qS-sVE"/>
-                            <constraint firstItem="ZHK-1J-lYf" firstAttribute="top" secondItem="D5N-vE-Yk7" secondAttribute="top" id="nE2-lH-lzI"/>
+                            <constraint firstItem="ZHK-1J-lYf" firstAttribute="leading" secondItem="D5N-vE-Yk7" secondAttribute="leading" constant="8" id="2G3-To-gff"/>
+                            <constraint firstItem="D5N-vE-Yk7" firstAttribute="bottom" secondItem="ZHK-1J-lYf" secondAttribute="bottom" constant="20" id="I19-fJ-O2Q"/>
+                            <constraint firstItem="ZHK-1J-lYf" firstAttribute="top" secondItem="D5N-vE-Yk7" secondAttribute="top" constant="8" id="OxP-vv-ROz"/>
+                            <constraint firstItem="D5N-vE-Yk7" firstAttribute="trailing" secondItem="ZHK-1J-lYf" secondAttribute="trailing" constant="8" id="SwT-88-mk5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D5N-vE-Yk7"/>
                     </view>
@@ -155,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kMa-QH-wMl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1063" y="-199"/>
+            <point key="canvasLocation" x="1061.5999999999999" y="-199.25037481259372"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cnz-hW-5OR">

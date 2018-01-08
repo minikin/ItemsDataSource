@@ -1,7 +1,14 @@
 # ItemsDataSource
 
+<p>
+    <a href="https://travis-ci.org/Instagram/IGListKit">
+        <img src="https://travis-ci.org/minikin/ItemsDataSource.svg?branch=master&style=flat"
+             alt="Build Status">
+    </a>
+</p>
 
-[![Build Status](https://travis-ci.org/minikin/ItemsDataSource.svg?branch=master)](https://travis-ci.org/minikin/ItemsDataSource)
+<img src="https://j.gifs.com/PZ5v6y.gif" width=300 />
+
 
 ItemsDataSource is an generic datasource for UICollectionView.
 
@@ -13,9 +20,11 @@ ItemsDataSource is an generic datasource for UICollectionView.
 
 ## Features
 
-- [] Description will be added
-- [] Description will be added
-- [] Description will be added
+- [x] Create collections with any data types
+- [x] Reusable UICollectionViewCell and UICollectionReusableView
+- [x] UICollectionView at its core
+- [x] Easy extendable
+- [] Fully unit tested
 
 ## Requirements
 - iOS 10.0+ 
