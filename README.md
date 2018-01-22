@@ -1,7 +1,7 @@
 # ItemsDataSource
 
 <p>
-    <a href="https://travis-ci.org/Instagram/IGListKit">
+    <a href="https://travis-ci.org/minikin/ItemsDataSource">
         <img src="https://travis-ci.org/minikin/ItemsDataSource.svg?branch=master&style=flat"
              alt="Build Status">
     </a>
