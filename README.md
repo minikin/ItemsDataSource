@@ -24,7 +24,6 @@ ItemsDataSource is an generic datasource for UICollectionView.
 - [x] Reusable UICollectionViewCell and UICollectionReusableView
 - [x] UICollectionView at its core
 - [x] Easy extendable
-- [] Fully unit tested
 
 ## Requirements
 - iOS 10.0+ 
