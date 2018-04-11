@@ -31,7 +31,6 @@ final class ExampleViewController: UIViewController {
 	// MARK: - ViewController LifeCycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
 		print("vitamins", vitamins)
 	}
 	

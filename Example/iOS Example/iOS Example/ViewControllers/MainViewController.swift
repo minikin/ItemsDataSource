@@ -13,7 +13,7 @@ final class MainViewController: UIViewController {
 	
 	// MARK: - Injections
 	public var healthyDataSourse = ItemsDataSource(sections: [HealthyGroup](),
-																								 supplementaryDescriptor: {$0.supplementaryDescriptor!},
+																								 supplementaryDescriptor: {$0.supplementaryDescriptor!}, // We 100% that we'll have supplementaryView!
 																								 cellDescriptor: { $0.itemCellDescriptor })
 	
 	// MARK: - IBOutlets
