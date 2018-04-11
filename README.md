@@ -1,7 +1,7 @@
 # ItemsDataSource
 
 <p>
-    <a href="https://travis-ci.org/Instagram/IGListKit">
+    <a href="https://travis-ci.org/minikin/ItemsDataSource">
         <img src="https://travis-ci.org/minikin/ItemsDataSource.svg?branch=master&style=flat"
              alt="Build Status">
     </a>
@@ -24,7 +24,6 @@ ItemsDataSource is an generic datasource for UICollectionView.
 - [x] Reusable UICollectionViewCell and UICollectionReusableView
 - [x] UICollectionView at its core
 - [x] Easy extendable
-- [] Fully unit tested
 
 ## Requirements
 - iOS 10.0+ 
