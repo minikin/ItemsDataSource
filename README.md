@@ -1,11 +1,9 @@
 # ItemsDataSource
 
-<p>
-    <a href="https://travis-ci.org/minikin/ItemsDataSource">
-        <img src="https://travis-ci.org/minikin/ItemsDataSource.svg?branch=master&style=flat"
-             alt="Build Status">
-    </a>
-</p>
+[![Build Status](https://travis-ci.org/minikin/ItemsDataSource.svg?branch=master)](https://travis-ci.org/minikin/ItemsDataSource)
+[![CocoaPods](https://img.shields.io/cocoapods/v/ItemsDataSource.svg)](https://cocoapods.org/pods/ItemsDataSource)
+[![Platform](https://img.shields.io/cocoapods/p/ItemsDataSource.svg?style=flat)](https://github.com/minikin/ItemsDataSource)
+
 
 <img src="https://github.com/minikin/ItemsDataSource/blob/master/demo.gif?raw=true" width=300 />
 
