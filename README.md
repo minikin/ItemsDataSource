@@ -8,7 +8,7 @@
 <img src="https://github.com/minikin/ItemsDataSource/blob/master/demo.gif?raw=true" width=300 />
 
 
-ItemsDataSource is an generic datasource for UICollectionView.
+ItemsDataSource is a generic datasource for UICollectionView.
 
 - [Features](#features)
 - [Requirements](#requirements)
