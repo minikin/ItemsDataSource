@@ -13,7 +13,7 @@ ItemsDataSource is a generic datasource for UICollectionView.
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [Usage]()
+- [Usage](#usage)
 - [License](#license)
 
 ## Features
@@ -103,6 +103,50 @@ Itemable.swift
 ItemsDataSource.swift
 SupplementaryDescriptor.swift
 ```
+## Usage
+
+Define your model as usual
+
+```
+import UIKit
+import ItemsDataSource
+
+struct Vitamin {
+	let name: String
+	let ammount: Double
+}
+```
+
+Conform your model  to ```Itemable```
+
+```
+
+extension Vitamin: Itemable {
+	var itemCellDescriptor: CellDescriptor {
+		get {
+			return CellDescriptor(reuseIdentifier: ReuseIdentifier.vitaminCell, 
+                                                  configure: self.configureIngredientCell)
+		}
+	}
+}
+
+```
+
+
+
+Add ```configure``` method to model in extension
+
+```
+extension Vitamin {
+	func configureIngredientCell(_ cell: ViataminCell) {
+	        cell.vitaminNameLabel.text = name
+	        cell.backgroundColor = UIColor.randomColor()
+	}
+}
+```
+
+Form more detailed exmaple, please check iOS example.
+
 ## License
 
 ItemsDataSource is released under the MIT license. [See LICENSE](https://github.com/minikin/ItemsDataSource/blob/master/LICENSE) for details.
