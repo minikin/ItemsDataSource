@@ -40,12 +40,12 @@ final class ExampleViewController: UIViewController {
 
   // MARK: - Helpers
 
-  func setExampleCollectionViewDataSource() {
+  private func setExampleCollectionViewDataSource() {
     vitaminsDataSourse.items = vitamins
     exampleCollectionView.dataSource = vitaminsDataSourse
   }
 
-  func setExampleCollectionViewLayout() {
+  private func setExampleCollectionViewLayout() {
     let layout = CommonFlowLayout(columns: 2,
                                   itemHeight: 200,
                                   inset: 5,

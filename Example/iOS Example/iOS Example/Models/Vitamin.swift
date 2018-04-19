@@ -13,7 +13,7 @@ struct Vitamin {
   // MARK: - Instance Properties
   
   let name: String
-  let ammount: Double
+  let amount: Double
 }
 
 extension Vitamin {

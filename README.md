@@ -4,9 +4,7 @@
 [![CocoaPods](https://img.shields.io/cocoapods/v/ItemsDataSource.svg)](https://cocoapods.org/pods/ItemsDataSource)
 [![Platform](https://img.shields.io/cocoapods/p/ItemsDataSource.svg?style=flat)](https://github.com/minikin/ItemsDataSource)
 
-
 <img src="https://github.com/minikin/ItemsDataSource/blob/master/demo.gif?raw=true" width=300 />
-
 
 ItemsDataSource is a generic datasource for UICollectionView.
 
@@ -24,7 +22,8 @@ ItemsDataSource is a generic datasource for UICollectionView.
 - [x] Easy extendable
 
 ## Requirements
-- iOS 10.0+ 
+
+- iOS 10.0+
 - Xcode 9.0+
 - Swift 4.0+
 
@@ -72,17 +71,16 @@ $ brew install carthage
 To integrate ItemsDataSource into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "ItemsDataSource" 
+github "ItemsDataSource"
 ```
 
 Run `carthage update` to build the framework and drag the built `ItemsDataSource.framework` into your Xcode project.
 
 ### Swift Package Manager
 
-The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. It is in early development, but ItemsDataSource does support its use on supported platforms. 
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. It is in early development, but ItemsDataSource does support its use on supported platforms.
 
 Once you have your Swift package set up, adding ItemsDataSource as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
-
 
 #### Swift 4
 
@@ -96,56 +94,115 @@ dependencies: [
 
 If you prefer not to use any of the aforementioned dependency managers, you can integrate ItemsDataSource into your project manually.
 Just copy files from `Sources` folder to your projects:
-```
+
+```swift
+
 CellDescriptor.swift
 Groupable.swift
 Itemable.swift
 ItemsDataSource.swift
 SupplementaryDescriptor.swift
 ```
+
 ## Usage
 
 Define your model as usual
 
-```
+```swift
 import UIKit
 import ItemsDataSource
 
 struct Vitamin {
-	let name: String
-	let ammount: Double
+
+  // MARK: - Instance Properties
+
+  let name: String
+  let amount: Double
 }
 ```
 
 Conform your model  to ```Itemable```
 
-```
+```swift
 
 extension Vitamin: Itemable {
-	var itemCellDescriptor: CellDescriptor {
-		get {
-			return CellDescriptor(reuseIdentifier: ReuseIdentifier.vitaminCell, 
-                                                  configure: self.configureIngredientCell)
-		}
-	}
+  var itemCellDescriptor: CellDescriptor {
+    return CellDescriptor(reuseIdentifier: ReuseIdentifier.vitaminCell, configure: configureIngredientCell)
+  }
 }
 
 ```
-
-
 
 Add ```configure``` method to model in extension
 
-```
+```swift
 extension Vitamin {
-	func configureIngredientCell(_ cell: ViataminCell) {
-	        cell.vitaminNameLabel.text = name
-	        cell.backgroundColor = UIColor.randomColor()
-	}
+  func configureIngredientCell(_ cell: ViataminCell) {
+    cell.vitaminNameLabel.text = name
+    cell.backgroundColor = UIColor.randomColor()
+  }
 }
 ```
 
-Form more detailed exmaple, please check iOS example.
+In ViewController inject your datasource 
+
+```swift
+
+import ItemsDataSource
+import UIKit
+
+final class ExampleViewController: UIViewController {
+
+  // MARK: - Injections
+
+  public var vitaminsDataSourse = ItemsDataSource(items: [Vitamin](),
+                                                  cellDescriptor: { $0.itemCellDescriptor })
+
+  // MARK: - IBOutlets
+
+  @IBOutlet var exampleCollectionView: UICollectionView! {
+    didSet {
+      setExampleCollectionViewDataSource()
+      exampleCollectionView.delegate = self
+      setExampleCollectionViewLayout()
+      exampleCollectionView.reloadData()
+    }
+  }
+
+  // MARK: - Instance Properties
+
+  var vitamins = [Vitamin]()
+
+  // MARK: - ViewController LifeCycle
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    print("vitamins", vitamins)
+  }
+
+  // MARK: - Helpers
+
+  private func setExampleCollectionViewDataSource() {
+    vitaminsDataSourse.items = vitamins
+    exampleCollectionView.dataSource = vitaminsDataSourse
+  }
+
+  private func setExampleCollectionViewLayout() {
+    let layout = CommonFlowLayout(columns: 2,
+                                  itemHeight: 200,
+                                  inset: 5,
+                                  spacing: 0,
+                                  lineSpacing: 5)
+    exampleCollectionView.collectionViewLayout = layout
+  }
+}
+
+// MARK: - UICollectionViewDelegate
+
+extension ExampleViewController: UICollectionViewDelegate {}
+```
+
+For more details, please check an iOS example or ask me on twitter: [@minikin](https://twitter.com/minikin)
 
 ## License
 
