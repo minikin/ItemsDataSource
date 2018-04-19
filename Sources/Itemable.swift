@@ -7,5 +7,5 @@
 //
 
 public protocol Itemable {
-	var itemCellDescriptor: CellDescriptor {get}
+  var itemCellDescriptor: CellDescriptor { get }
 }

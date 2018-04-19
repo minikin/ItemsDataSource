@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ItemsDataSource"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "Generic CollectionView Data Source"
   s.description  = "Generic CollectionView Data Source for iOS"
   s.homepage     = "https://github.com/minikin/ItemsDataSource"

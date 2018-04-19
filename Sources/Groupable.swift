@@ -7,6 +7,6 @@
 //
 
 public protocol Groupable {
-	var items: [Itemable] {get}
-	var supplementaryDescriptor: SupplementaryDescriptor? {get}
+    var items: [Itemable] { get }
+    var supplementaryDescriptor: SupplementaryDescriptor? { get }
 }

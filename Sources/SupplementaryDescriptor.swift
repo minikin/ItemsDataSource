@@ -9,19 +9,21 @@
 import UIKit
 
 public struct SupplementaryDescriptor {
-	
-	// MARK: - Instance Properties
-	public let supplementaryClass: UICollectionReusableView.Type
-	public let reuseIdentifier: String
-	public let configure: (UICollectionReusableView) -> ()
-	
-	// MARK: - Object lifecycle
-	public init<SupplementaryView: UICollectionReusableView>(reuseIdentifier: String,
-																													 configure: @escaping (SupplementaryView) -> ()) {
-		self.supplementaryClass = SupplementaryView.self
-		self.reuseIdentifier = reuseIdentifier
-		self.configure = { supplementaryView in
-			configure(supplementaryView as! SupplementaryView)
-		}
-	}
+
+  // MARK: - Instance Properties
+
+  public let supplementaryClass: UICollectionReusableView.Type
+  public let reuseIdentifier: String
+  public let configure: (UICollectionReusableView) -> Void
+
+  // MARK: - Object lifecycle
+
+  public init<SupplementaryView: UICollectionReusableView>(reuseIdentifier: String,
+                                                           configure: @escaping (SupplementaryView) -> Void) {
+    supplementaryClass = SupplementaryView.self
+    self.reuseIdentifier = reuseIdentifier
+    self.configure = { supplementaryView in
+      configure(supplementaryView as! SupplementaryView)
+    }
+  }
 }
