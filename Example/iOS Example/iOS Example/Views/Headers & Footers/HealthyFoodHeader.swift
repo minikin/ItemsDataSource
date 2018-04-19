@@ -9,5 +9,5 @@
 import UIKit
 
 final class HealthyFoodHeader: UICollectionReusableView {
-	@IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet var headerLabel: UILabel!
 }

@@ -27,7 +27,6 @@
 		FC7484E61FE7C733002AB969 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7484E51FE7C733002AB969 /* Assets.xcassets */; };
 		FC7484E91FE7C733002AB969 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7484E71FE7C733002AB969 /* LaunchScreen.storyboard */; };
 		FC945CB51FEBDFBB00CE19F4 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC945CB41FEBDFBB00CE19F4 /* DataSource.swift */; };
-		FC945CB71FEBE65300CE19F4 /* HealthyFoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC945CB61FEBE65300CE19F4 /* HealthyFoodViewModel.swift */; };
 		FCDA08F81FFE737F00FB2F9C /* SegueIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDA08F71FFE737F00FB2F9C /* SegueIdentifier.swift */; };
 /* End PBXBuildFile section */
 
@@ -91,7 +90,6 @@
 		FC7484EA1FE7C733002AB969 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC7484F11FE7CB52002AB969 /* ItemsDataSource.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ItemsDataSource.xcodeproj; path = ../../ItemsDataSource.xcodeproj; sourceTree = "<group>"; };
 		FC945CB41FEBDFBB00CE19F4 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
-		FC945CB61FEBE65300CE19F4 /* HealthyFoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyFoodViewModel.swift; sourceTree = "<group>"; };
 		FCDA08F71FFE737F00FB2F9C /* SegueIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -242,7 +240,6 @@
 				FC1ED1D21FE7D79C002E50FD /* Storyboards and Xibs */,
 				FC1ED1D11FE7D791002E50FD /* Supporting Files */,
 				FC1ED1CE1FE7D77D002E50FD /* ViewControllers */,
-				FC945CB81FEBE65B00CE19F4 /* ViewModels */,
 				FC1ED1CF1FE7D787002E50FD /* Views */,
 			);
 			path = "iOS Example";
@@ -255,14 +252,6 @@
 				FC7484F91FE7CB52002AB969 /* ItemsDataSource-iOS Tests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		FC945CB81FEBE65B00CE19F4 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				FC945CB61FEBE65300CE19F4 /* HealthyFoodViewModel.swift */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,7 +361,6 @@
 				FC1ED1CD1FE7D779002E50FD /* ExampleViewController.swift in Sources */,
 				FC6DA55F1FEBB6BE0042E8DA /* ReuseIdentifier.swift in Sources */,
 				FC1ED1DD1FE7F0B1002E50FD /* HealthyFoodHeader.swift in Sources */,
-				FC945CB71FEBE65300CE19F4 /* HealthyFoodViewModel.swift in Sources */,
 				FC6DA5631FEBBF430042E8DA /* HealthyType.swift in Sources */,
 				FC6DA5661FEBBFB70042E8DA /* HealthyFood.swift in Sources */,
 				FCDA08F81FFE737F00FB2F9C /* SegueIdentifier.swift in Sources */,

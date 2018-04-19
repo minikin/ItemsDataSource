@@ -6,8 +6,6 @@
 //  Copyright © 2018 Sasha Prokhorenko. All rights reserved.
 //
 
-import Foundation
-
 enum SegueIdentifier {
-	static let fromMainToExample = "toExample"
+  static let fromMainToExample = "toExample"
 }

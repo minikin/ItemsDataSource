@@ -9,5 +9,5 @@
 import UIKit
 
 final class ViataminCell: UICollectionViewCell {
-	@IBOutlet weak var vitaminNameLabel: UILabel!
+    @IBOutlet var vitaminNameLabel: UILabel!
 }

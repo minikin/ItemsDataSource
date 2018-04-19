@@ -9,21 +9,21 @@
 import ItemsDataSource
 
 struct HealthyGroup: Groupable {
-	// MARK: - Instance Properties
-	let name: HealthyType
-	var items: [Itemable]
-	var supplementaryDescriptor: SupplementaryDescriptor? {
-		get {
-			return SupplementaryDescriptor(reuseIdentifier: ReuseIdentifier.healthyGroupHeader,
-																		 configure: self.configureHealthyFoodpHeader)
-		}
-	}
+
+  // MARK: - Instance Properties
+
+  let name: HealthyType
+  var items: [Itemable]
+  var supplementaryDescriptor: SupplementaryDescriptor? {
+    return SupplementaryDescriptor(reuseIdentifier: ReuseIdentifier.healthyGroupHeader,
+                                   configure: configureHealthyFoodpHeader)
+  }
 }
 
 extension HealthyGroup {
-	func configureHealthyFoodpHeader(_ header: HealthyFoodHeader) {
-		header.headerLabel.text = name.rawValue
-		header.headerLabel.textColor = .white
-		header.backgroundColor = .black
-	}
+  func configureHealthyFoodpHeader(_ header: HealthyFoodHeader) {
+    header.headerLabel.text = name.rawValue
+    header.headerLabel.textColor = .white
+    header.backgroundColor = .black
+  }
 }
