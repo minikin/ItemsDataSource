@@ -51,6 +51,17 @@ target '<Your Target Name>' do
 end
 ```
 
+if you're using `CocoaPods 1.5.0+` you can include `ItemsDataSource` as static library:
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+
+target '<Your Target Name>' do
+    pod 'ItemsDataSource'
+end
+```
+
 Then, run the following command:
 
 ```bash
