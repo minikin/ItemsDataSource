@@ -67,7 +67,7 @@ final class CommonFlowLayout: UICollectionViewFlowLayout {
     return collectionView!.contentOffset
   }
 
-  open override func shouldInvalidateLayout(forBoundsChange _: CGRect) -> Bool {
+  override func shouldInvalidateLayout(forBoundsChange _: CGRect) -> Bool {
     return true
   }
 }
