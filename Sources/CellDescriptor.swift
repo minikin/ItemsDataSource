@@ -10,7 +10,6 @@ import UIKit
 
 /// CellDescriptor
 public struct CellDescriptor {
-
   // MARK: - Instance Properties
 
   public let cellClass: UICollectionViewCell.Type

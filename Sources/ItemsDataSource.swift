@@ -9,7 +9,6 @@
 import UIKit
 
 open class ItemsDataSource: NSObject, UICollectionViewDataSource {
-
   // MARK: - Instance Properties
 
   public var sections: [Groupable]?
@@ -79,7 +78,7 @@ open class ItemsDataSource: NSObject, UICollectionViewDataSource {
                              viewForSupplementaryElementOfKind kind: String,
                              at indexPath: IndexPath) -> UICollectionReusableView {
     switch kind {
-    case UICollectionElementKindSectionHeader:
+    case UICollectionView.elementKindSectionHeader:
       if let sections = self.sections {
         let section = sections[indexPath.section]
         guard let headerDescriptor = supplementaryDescriptor else {

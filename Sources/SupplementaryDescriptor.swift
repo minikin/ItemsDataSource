@@ -9,7 +9,6 @@
 import UIKit
 
 public struct SupplementaryDescriptor {
-
   // MARK: - Instance Properties
 
   public let supplementaryClass: UICollectionReusableView.Type
