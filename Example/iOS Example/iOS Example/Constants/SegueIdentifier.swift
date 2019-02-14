@@ -7,5 +7,5 @@
 //
 
 enum SegueIdentifier {
-  static let fromMainToExample = "toExample"
+    static let fromMainToExample = "toExample"
 }

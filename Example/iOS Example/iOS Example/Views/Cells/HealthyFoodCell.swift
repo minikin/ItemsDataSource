@@ -9,7 +9,6 @@
 import UIKit
 
 final class HealthyFoodCell: UICollectionViewCell {
-
     // MARK: - IBOutlets
 
     @IBOutlet var cellLabel: UILabel!

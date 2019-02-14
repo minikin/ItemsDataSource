@@ -10,20 +10,19 @@ import UIKit
 
 /// CellDescriptor
 public struct CellDescriptor {
+    // MARK: - Instance Properties
 
-  // MARK: - Instance Properties
+    public let cellClass: UICollectionViewCell.Type
+    public let reuseIdentifier: String
+    public let configure: (UICollectionViewCell) -> Void
 
-  public let cellClass: UICollectionViewCell.Type
-  public let reuseIdentifier: String
-  public let configure: (UICollectionViewCell) -> Void
+    // MARK: - Object lifecycle
 
-  // MARK: - Object lifecycle
-
-  public init<Cell: UICollectionViewCell>(reuseIdentifier: String, configure: @escaping (Cell) -> Void) {
-    cellClass = Cell.self
-    self.reuseIdentifier = reuseIdentifier
-    self.configure = { cell in
-      configure(cell as! Cell)
+    public init<Cell: UICollectionViewCell>(reuseIdentifier: String, configure: @escaping (Cell) -> Void) {
+        cellClass = Cell.self
+        self.reuseIdentifier = reuseIdentifier
+        self.configure = { cell in
+            configure(cell as! Cell)
+        }
     }
-  }
 }

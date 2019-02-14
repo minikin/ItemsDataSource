@@ -7,7 +7,7 @@
 //
 
 enum ReuseIdentifier {
-  static let healthyGroupHeader = "HealthyFoodHeader"
-  static let healthyFoodCell = "HealthyFoodCell"
-  static let vitaminCell = "VitaminCell"
+    static let healthyGroupHeader = "HealthyFoodHeader"
+    static let healthyFoodCell = "HealthyFoodCell"
+    static let vitaminCell = "VitaminCell"
 }

@@ -10,49 +10,48 @@ import ItemsDataSource
 import UIKit
 
 final class ExampleViewController: UIViewController {
+    // MARK: - Injections
 
-  // MARK: - Injections
+    public var vitaminsDataSourse = ItemsDataSource(items: [Vitamin](),
+                                                    cellDescriptor: { $0.itemCellDescriptor })
 
-  public var vitaminsDataSourse = ItemsDataSource(items: [Vitamin](),
-                                                  cellDescriptor: { $0.itemCellDescriptor })
+    // MARK: - IBOutlets
 
-  // MARK: - IBOutlets
-
-  @IBOutlet var exampleCollectionView: UICollectionView! {
-    didSet {
-      setExampleCollectionViewDataSource()
-      exampleCollectionView.delegate = self
-      setExampleCollectionViewLayout()
-      exampleCollectionView.reloadData()
+    @IBOutlet var exampleCollectionView: UICollectionView! {
+        didSet {
+            setExampleCollectionViewDataSource()
+            exampleCollectionView.delegate = self
+            setExampleCollectionViewLayout()
+            exampleCollectionView.reloadData()
+        }
     }
-  }
 
-  // MARK: - Instance Properties
+    // MARK: - Instance Properties
 
-  var vitamins = [Vitamin]()
+    var vitamins = [Vitamin]()
 
-  // MARK: - ViewController LifeCycle
+    // MARK: - ViewController LifeCycle
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    print("vitamins", vitamins)
-  }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("vitamins", vitamins)
+    }
 
-  // MARK: - Helpers
+    // MARK: - Helpers
 
-  private func setExampleCollectionViewDataSource() {
-    vitaminsDataSourse.items = vitamins
-    exampleCollectionView.dataSource = vitaminsDataSourse
-  }
+    private func setExampleCollectionViewDataSource() {
+        vitaminsDataSourse.items = vitamins
+        exampleCollectionView.dataSource = vitaminsDataSourse
+    }
 
-  private func setExampleCollectionViewLayout() {
-    let layout = CommonFlowLayout(columns: 2,
-                                  itemHeight: 200,
-                                  inset: 5,
-                                  spacing: 0,
-                                  lineSpacing: 5)
-    exampleCollectionView.collectionViewLayout = layout
-  }
+    private func setExampleCollectionViewLayout() {
+        let layout = CommonFlowLayout(columns: 2,
+                                      itemHeight: 200,
+                                      inset: 5,
+                                      spacing: 0,
+                                      lineSpacing: 5)
+        exampleCollectionView.collectionViewLayout = layout
+    }
 }
 
 // MARK: - UICollectionViewDelegate
