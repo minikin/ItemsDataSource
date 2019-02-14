@@ -9,9 +9,8 @@
 import UIKit
 
 final class CommonFlowLayout: UICollectionViewFlowLayout {
-
   // MRK: - Properties
-  
+
   let columns: CGFloat
   let itemHeight: CGFloat
   let inset: CGFloat
@@ -47,11 +46,10 @@ final class CommonFlowLayout: UICollectionViewFlowLayout {
   }
 
   override var itemSize: CGSize {
-    set {
-      self.itemSize = CGSize(width: itemWidth(), height: itemHeight)
-    }
     get {
       return CGSize(width: itemWidth(), height: itemHeight)
+    } set {
+      self.itemSize = CGSize(width: itemWidth(), height: itemHeight)
     }
   }
 
@@ -67,7 +65,7 @@ final class CommonFlowLayout: UICollectionViewFlowLayout {
     return collectionView!.contentOffset
   }
 
-  open override func shouldInvalidateLayout(forBoundsChange _: CGRect) -> Bool {
+  public override func shouldInvalidateLayout(forBoundsChange _: CGRect) -> Bool {
     return true
   }
 }
