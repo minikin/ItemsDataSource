@@ -9,11 +9,11 @@
 import Foundation
 
 let vitamins = [
-  Vitamin(name: "A", amount: 0.012),
-  Vitamin(name: "B", amount: 0.35),
-  Vitamin(name: "C", amount: 0.099),
-  Vitamin(name: "D", amount: 0.000122),
-  Vitamin(name: "B12", amount: 0.5),
+    Vitamin(name: "A", amount: 0.012),
+    Vitamin(name: "B", amount: 0.35),
+    Vitamin(name: "C", amount: 0.099),
+    Vitamin(name: "D", amount: 0.000122),
+    Vitamin(name: "B12", amount: 0.5),
 ]
 
 let apple = HealthyFood(type: .fruit, name: "Apple", calories: "52", fat: "0,2", protein: "0,3", carbohydrate: "14", vitamins: vitamins)

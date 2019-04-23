@@ -7,6 +7,6 @@
 //
 
 enum HealthyType: String {
-  case vegetable = "Vegetables"
-  case fruit = "Fruits"
+    case vegetable = "Vegetables"
+    case fruit = "Fruits"
 }

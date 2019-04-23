@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import XCTest
 import ItemsDataSource
+import XCTest
 
 class ItemsDataSourceTests: XCTestCase {
     func testExample() {
@@ -16,7 +16,7 @@ class ItemsDataSourceTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //// XCTAssertEqual(ItemsDataSource().text, "Hello, World!")
     }
-    
+
     static var allTests = [
         ("testExample", testExample),
     ]
