@@ -25,7 +25,7 @@ ItemsDataSource is a generic datasource for UICollectionView.
 
 - iOS 10.0+
 - Xcode 9.0+
-- Swift 4.0+
+- Swift 5.0+
 
 ## Installation
 
@@ -132,7 +132,7 @@ struct Vitamin {
 }
 ```
 
-Conform your model  to ```Itemable```
+Conform your model to `Itemable`
 
 ```swift
 
@@ -144,7 +144,7 @@ extension Vitamin: Itemable {
 
 ```
 
-Add ```configure``` method to model in extension
+Add `configure` method to model in extension
 
 ```swift
 extension Vitamin {
@@ -155,7 +155,7 @@ extension Vitamin {
 }
 ```
 
-In ViewController inject your datasource 
+In ViewController inject your datasource
 
 ```swift
 
