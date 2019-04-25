@@ -87,20 +87,6 @@ github "ItemsDataSource"
 
 Run `carthage update` to build the framework and drag the built `ItemsDataSource.framework` into your Xcode project.
 
-### Swift Package Manager
-
-The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. It is in early development, but ItemsDataSource does support its use on supported platforms.
-
-Once you have your Swift package set up, adding ItemsDataSource as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
-
-#### Swift 4
-
-```swift
-dependencies: [
-    .package(url: "https://github.com/minikin/ItemsDataSource.git")
-]
-```
-
 ### Manually
 
 If you prefer not to use any of the aforementioned dependency managers, you can integrate ItemsDataSource into your project manually.
