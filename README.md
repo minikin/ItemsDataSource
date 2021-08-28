@@ -201,6 +201,10 @@ extension ExampleViewController: UICollectionViewDelegate {}
 
 For more details, please check an iOS example or ask me on twitter: [@minikin](https://twitter.com/minikin)
 
+## Support
+
+Post issues and feature requests on the GitHub [issue tracker](https://github.com/minikin/ItemsDataSource/issues).
+
 ## License
 
 ItemsDataSource is released under the MIT license. [See LICENSE](https://github.com/minikin/ItemsDataSource/blob/master/LICENSE) for details.
