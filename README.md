@@ -201,7 +201,7 @@ final class ExampleViewController: UIViewController {
 extension ExampleViewController: UICollectionViewDelegate {}
 ```
 
-For more details, please check an iOS example or ask me on twitter: [@minikin](https://twitter.com/minikin)
+For more details, please check an iOS example.
 
 ## Support
 
